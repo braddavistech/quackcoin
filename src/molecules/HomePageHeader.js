@@ -5,10 +5,10 @@ import BalloonQuack from '../images/BalloonQuack.jpeg';
 import BarQuack from '../images/BarQuack.jpeg'
 import BatmanQuack from '../images/BatmanQuack.jpeg';
 import BeatlesQuack from '../images/BeatlesQuack.jpeg'
-import CardQuack from '../images/CardQuack.jpeg';
-import ChessQuack from '../images/ChessQuack.jpeg';
-import CookQuack from '../images/CookQuack.jpeg';
-import KingQuack from '../images/KingQuack.jpeg'
+// import CardQuack from '../images/CardQuack.jpeg';
+// import ChessQuack from '../images/ChessQuack.jpeg';
+// import CookQuack from '../images/CookQuack.jpeg';
+// import KingQuack from '../images/KingQuack.jpeg'
 import LamboQuack from '../images/LamboQuack.jpeg'
 import MatrixQuack from '../images/MatrixQuack.jpeg'
 import PeopleQuack from '../images/PeopleQuack.jpeg';

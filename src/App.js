@@ -2,12 +2,13 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  useLocation
+  Link
 } from "react-router-dom";
+import { useState } from "react";
 import styled from "styled-components";
 import Home from './views/Home';
 import HomePageHeader from "./molecules/HomePageHeader";
+import Navbar from "./molecules/Navbar";
 import Footer from "./molecules/Footer";
 import Founder from "./views/Founder";
 import Roadmap from "./views/Roadmap";
@@ -39,29 +40,22 @@ const NavItem = styled(Link)`
 `
 
 const App = () => {
-  const location = useLocation();
+  const [width, setWidth] = useState(window.innerWidth)
+  const setWindowWidth = () => {
+    setWidth(window.innerWidth)
+  }
+
+  window.addEventListener('resize', setWindowWidth)
+
   return (
     <Div>
-      <HomePageHeader />
-      <WhiteDiv>
-        <NavItem to="/" active={(location.pathname === '/').toString()}>
-          Home
-        </NavItem>
-        <NavItem to="/mission" active={(location.pathname === '/mission').toString()}>
-          Mission
-        </NavItem>
-        <NavItem to="/founder" active={(location.pathname === '/founder').toString()}>
-          Founder
-        </NavItem>
-        <NavItem to="/roadmap" active={(location.pathname === '/roadmap').toString()}>
-          Roadmap
-        </NavItem>
-      </WhiteDiv>
+      <HomePageHeader width={width}/>
+      <Navbar width={width}/>
       <Routes>
         <Route path="/founder" element={<Founder />} />
         <Route path="/roadmap" element={<Roadmap />} />
         <Route path="/mission" element={<Mission />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Home width={width}/>} />
       </Routes>
       <Footer/>
     </Div>

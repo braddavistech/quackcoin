@@ -24,10 +24,10 @@ const Paragraph = styled.p`
   text-align: center;
 `
 
-const HomeBody = () => {
+const HomeBody = ({ width }) => {
   return (
     <Div>
-      <QuackOnBike style={`width: 40vw;`} />
+      <QuackOnBike width={width} style={`width: 40vw;`} />
       <TextDiv>
       <Paragraph><span style={{color: 'yellow'}}>$Quack</span> is not just a memecoin.</Paragraph>
       <Paragraph>We are a movement. Quack is the mighty duck of the base blockchain, bringing a splash of humour and excitement to the world of digital currency. Join us and become part of the flock today!</Paragraph>

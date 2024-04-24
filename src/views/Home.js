@@ -8,10 +8,10 @@ const Div = styled.div`
   background-color: #9dd2fa;
 `
 
-const Home = () => {
+const Home = ({ width }) => {
   return (
     <Div>
-      <HomeBody />
+      <HomeBody width={width}/>
       <Links />
     </Div>
   );

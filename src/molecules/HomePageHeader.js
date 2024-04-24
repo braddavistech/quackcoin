@@ -42,7 +42,7 @@ const Overlay = styled.div`
 
 `
 
-const HomePageHeader = () => {
+const HomePageHeader = ({ width }) => {
   return (
     <Div>
       <WrapperDiv>

@@ -74,12 +74,11 @@ font-family: "Permanent Marker", cursive;
 `
 
 const QuackOnBike = (props) => {
-  const { innerWidth: width } = window;
 
   return (
     <>
-      <Paragraph width={width}>Welcome to $Quack, the quacktastic memecoin that's making waves in the crypto world!</Paragraph>
-      <SmallParagraph width={width}>CLICK DUCKS TO JOIN $QUACK COMMUNITY </SmallParagraph>
+      <Paragraph width={props.width}>Welcome to $Quack, the quacktastic memecoin that's making waves in the crypto world!</Paragraph>
+      <SmallParagraph width={props.width}>CLICK DUCKS TO JOIN $QUACK COMMUNITY </SmallParagraph>
       <Div>
         <Image src={Logo} props={props} className="Quack-logo" alt="Quack Coin" />
         <SplashImg src={Splash} />

@@ -15,7 +15,6 @@ const Copywright = styled.p`
 const Footer = () => {
   return (
     <Div>
-
       <Copywright>Copyright 2024 QUACK COIN– All rights reserved.</Copywright>
     </Div>
   );

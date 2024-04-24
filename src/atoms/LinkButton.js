@@ -18,6 +18,7 @@ const ButtonDiv = styled.div`
   padding: 10px;
   margin: 10px;
   cursor: pointer;
+  min-width: 150px;
 `
 
 const Image = styled.img`

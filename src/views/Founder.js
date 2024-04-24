@@ -1,6 +1,4 @@
 import { styled } from "styled-components";
-import HomeBody from "../molecules/HomeBody";
-import Links from "../molecules/Links";
 
 const Div = styled.div`
   min-height: 100vh;
@@ -8,13 +6,18 @@ const Div = styled.div`
   background-color: #9dd2fa;
 `
 
-const Home = () => {
+const Title = styled.h3`
+  text-align: center;
+  font-size: 30px;
+`
+
+
+const Founder = () => {
   return (
     <Div>
-      <HomeBody />
-      <Links />
+      <Title>Our Doxxed Founder</Title>
     </Div>
   );
 }
 
-export default Home;
+export default Founder;

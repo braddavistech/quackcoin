@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import ViewWrapper from "../atoms/ViewWrapper";
+import Links from "../molecules/Links";
 
 const Title = styled.h3`
     text-align: center;
@@ -7,13 +8,13 @@ const Title = styled.h3`
 `
 
 
-const Roadmap = ({ width }) => {
-
+const SocialLinks = ({ width }) => {
   return (
     <ViewWrapper width={width}>
-      <Title width={width}>Placeholder For Roadmap</Title>
+      <Title>Links</Title>
+      <Links width={width} />
     </ViewWrapper>
   );
 }
 
-export default Roadmap;
+export default SocialLinks;

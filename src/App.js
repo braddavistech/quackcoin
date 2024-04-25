@@ -13,6 +13,9 @@ import Footer from "./molecules/Footer";
 import Founder from "./views/Founder";
 import Roadmap from "./views/Roadmap";
 import Mission from "./views/Mission";
+import About from "./views/About";
+import Chart from "./views/Chart";
+import SocialLinks from "./views/SocialLinks";
 
 const Div = styled.div`
   min-height: 100vh;
@@ -49,13 +52,15 @@ const App = () => {
 
   return (
     <Div>
-      <HomePageHeader width={width}/>
       <Navbar width={width}/>
       <Routes>
-        <Route path="/founder" element={<Founder />} />
-        <Route path="/roadmap" element={<Roadmap />} />
-        <Route path="/mission" element={<Mission />} />
+        <Route path="/about" element={<About width={width} />} />
+        <Route path="/chart" element={<Chart width={width} />} />
+        <Route path="/links" element={<SocialLinks width={width} />} />
+        <Route path="/roadmap" element={<Roadmap width={width} />} />
         <Route path="*" element={<Home width={width}/>} />
+        {/* <Route path="/founder" element={<Founder />} /> */}
+        {/* <Route path="/mission" element={<Mission />} /> */}
       </Routes>
       <Footer/>
     </Div>

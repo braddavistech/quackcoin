@@ -12,7 +12,6 @@ const Div = styled.div`
      `: `flex-direction: row;`
   }
   flex-wrap: wrap;
-  background-color: white;
   width: 100vw;
   padding: 20px 0px 5px;
   justify-content: space-evenly;

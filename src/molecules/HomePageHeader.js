@@ -5,6 +5,7 @@ import BalloonQuack from '../images/BalloonQuack.jpeg';
 import BarQuack from '../images/BarQuack.jpeg'
 import BatmanQuack from '../images/BatmanQuack.jpeg';
 import BeatlesQuack from '../images/BeatlesQuack.jpeg'
+import HomePageImage from '../images/HomePageImage.jpg'
 // import CardQuack from '../images/CardQuack.jpeg';
 // import ChessQuack from '../images/ChessQuack.jpeg';
 // import CookQuack from '../images/CookQuack.jpeg';
@@ -21,6 +22,7 @@ import BuyButton from '../atoms/BuyButton';
 const Div = styled.div`
   background-color: #9dd2fa;
 `
+
 const WrapperDiv = styled.div`
 
   height: 40vw;
@@ -64,7 +66,7 @@ const HomePageHeader = ({ width }) => {
       </WrapperDiv>
       <Overlay />
       <QuackMainLogo />
-      <BuyButton to="https://app.uniswap.org/swap?outputCurrency=0x5ace197d87b614942bc1670eb0ddd55ce4432801&chain=base" text="BUY QUACK" />
+      {/* <BuyButton to="https://app.uniswap.org/swap?outputCurrency=0x5ace197d87b614942bc1670eb0ddd55ce4432801&chain=base" text="BUY QUACK" /> */}
     </Div>
   );
 }

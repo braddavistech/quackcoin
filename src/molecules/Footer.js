@@ -1,9 +1,20 @@
 import { styled } from 'styled-components';
 
+const Motto = styled.p`
+  color: white;
+  margin: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+`
+
 const Div = styled.div`
-  background-color: #0080ff;
+  background-color: var(--background_3);
   width: 100vw;
-  padding: 20px 0px 5px;
+  position: fixed;
+  bottom: 0;
 `
 
 const Copywright = styled.p`

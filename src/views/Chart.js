@@ -6,14 +6,18 @@ const Title = styled.h3`
     font-size: 30px;
 `
 
+const ChartData = styled.iframe`
 
-const Roadmap = ({ width }) => {
+`
 
+
+const Chart = ({ width }) => {
   return (
     <ViewWrapper width={width}>
-      <Title width={width}>Placeholder For Roadmap</Title>
+      <Title>Placeholder For Chart</Title>
+      {/* <ChartData src="https://coinmarketcap.com/community/post/335796758" /> */}
     </ViewWrapper>
   );
 }
 
-export default Roadmap;
+export default Chart;

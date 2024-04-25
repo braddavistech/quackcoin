@@ -1,19 +1,27 @@
 import { styled } from "styled-components";
+import HomePageHeader from "../molecules/HomePageHeader";
+import ViewWrapper from "../atoms/ViewWrapper";
 import HomeBody from "../molecules/HomeBody";
 import Links from "../molecules/Links";
+import HomePageImage from "../images/HomePageImage.jpg"
 
 const Div = styled.div`
-  min-height: 100vh;
   width: 100vw;
-  background-color: #9dd2fa;
+`
+
+const Header = styled.img`
+  width: 100vw;
 `
 
 const Home = ({ width }) => {
   return (
-    <Div>
-      <HomeBody width={width}/>
-      <Links />
-    </Div>
+    <ViewWrapper width={width}>
+      <Header src={HomePageImage} alt='Quack Header' />
+      <Div>
+        <HomeBody width={width} />
+        {/* <Links /> */}
+      </Div>
+    </ViewWrapper>
   );
 }
 

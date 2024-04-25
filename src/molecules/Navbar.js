@@ -7,44 +7,26 @@ import {
   Link,
   useLocation
 } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import QuackText from '../images/QuackText.png'
+import BuyButton from '../atoms/BuyButton';
 
-const WhiteDiv = styled.div`
-  background-color: #0181ff;
+const NavbarDiv = styled.div`
+  background-color: var(--background_3);
   width: 100vw;
-  display: flex;
-  flex-direction: column;
-`
-
-const MenuIcon = styled(FontAwesomeIcon)`
-  color: white;
-`
-
-const Motto = styled.p`
-  color: white;
-  margin: 0;
-  text-align: center;
-  font-size: 1.8rem;
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
-`
-
-const NavMenuIconDiv = styled.div`
-  padding: 5px;
-  display: flex;
-  justify-content: end;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 `
 
 const NavMenu = styled.div`
   display: flex;
-  ${(width) => width <= 500 ? `
-    flex-direction: column;
-  ` : `
-    flex-direction: row;
-    justify-content: space-evenly;
-  `}
+  justify-content: space-between;
+  margin: 0 15px;
+  padding: 5px 0px;
+`
+
+const QuackImage = styled.img`
+  height: 22px;
 `
 
 const NavItem = styled(Link)`
@@ -53,43 +35,54 @@ const NavItem = styled(Link)`
   font-weight: bolder;
   display: flex;
   align-items: center;
-  font-size: 20px;
+  font-size: 18px;
   ${({ active }) => active === 'true' && `
-    font-size: 24px;
+    color: var(--background_1);
   `}
 `
 
 const Navbar = ({ width }) => {
-  const [showMenu, setShowMenu] = useState(width >= 501)
   const location = useLocation();
 
-
-
-  console.warn({ width })
   return (
-    <WhiteDiv>
-      <Motto>NOT JUST A MEME, WE ARE A MOVEMENT!</Motto>
-      {width <= 500 && <NavMenuIconDiv>
-        {!showMenu ? <MenuIcon onClick={() => setShowMenu(true)} icon={faChevronDown} /> : <MenuIcon onClick={() => setShowMenu(false)} icon={faChevronUp} />}
-      </NavMenuIconDiv>}
-      {showMenu &&
-      <>
-        <NavMenu>
-          <NavItem to="/" active={(location.pathname === '/').toString()}>
-            Home
-          </NavItem>
-          <NavItem to="/mission" active={(location.pathname === '/mission').toString()}>
-            Mission
-          </NavItem>
-          <NavItem to="/founder" active={(location.pathname === '/founder').toString()}>
-            Founder
-          </NavItem>
-          <NavItem to="/roadmap" active={(location.pathname === '/roadmap').toString()}>
-            Roadmap
-          </NavItem>
-          </NavMenu>
+    <NavbarDiv>
+      <NavMenu>
+        <NavItem to="/" active={(location.pathname === '/').toString()}>
+          <QuackImage src={QuackText} alt="Quack"/>
+        </NavItem>
+        {width > 650 && <>
+        <NavItem to="/about" active={(location.pathname === '/about').toString()}>
+          About
+        </NavItem>
+        <NavItem to="/chart" active={(location.pathname === '/chart').toString()}>
+          Chart
+        </NavItem>
+        <NavItem to="/links" active={(location.pathname === '/links').toString()}>
+          Links
+        </NavItem>
+        <NavItem to="/roadmap" active={(location.pathname === '/roadmap').toString()}>
+          Roadmap
+        </NavItem>
         </>}
-    </WhiteDiv>
+        <BuyButton width={width} text='BUY NOW' to='https://app.uniswap.org/swap?outputCurrency=0x5ace197d87b614942bc1670eb0ddd55ce4432801&chain=base' />
+      </NavMenu>
+      { width <= 650 &&
+        <NavMenu>
+            <NavItem to="/about" active={(location.pathname === '/about').toString()}>
+              About
+            </NavItem>
+            <NavItem to="/chart" active={(location.pathname === '/chart').toString()}>
+              Chart
+            </NavItem>
+            <NavItem to="/links" active={(location.pathname === '/links').toString()}>
+              Links
+            </NavItem>
+            <NavItem to="/roadmap" active={(location.pathname === '/roadmap').toString()}>
+              Roadmap
+            </NavItem>
+        </NavMenu>
+      }
+    </NavbarDiv>
   );
 }
 

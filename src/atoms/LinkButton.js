@@ -8,6 +8,7 @@ const DivRow = styled.div`
 `
 
 const ButtonDiv = styled.div`
+  background-color: white;
   border: 2px solid black;
   border-radius: 50px;
   justify-content: center;
@@ -36,7 +37,6 @@ const Text = styled.p`
 const LinkButton = (props) => {
   const { innerWidth: width } = window;
 
-  console.warn({ props })
   return (
     <DivRow>
       <ButtonDiv width={width} onClick={() => window.open(props.to)}>

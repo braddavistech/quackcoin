@@ -55,10 +55,10 @@ const App = () => {
       <Navbar width={width}/>
       <Routes>
         <Route path="/about" element={<About width={width} />} />
-        <Route path="/chart" element={<Chart width={width} />} />
-        <Route path="/links" element={<SocialLinks width={width} />} />
         <Route path="/roadmap" element={<Roadmap width={width} />} />
+        <Route path="/links" element={<SocialLinks width={width} />} />
         <Route path="*" element={<Home width={width}/>} />
+        {/* <Route path="/chart" element={<Chart width={width} />} /> */}
         {/* <Route path="/founder" element={<Founder />} /> */}
         {/* <Route path="/mission" element={<Mission />} /> */}
       </Routes>

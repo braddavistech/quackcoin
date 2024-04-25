@@ -13,14 +13,13 @@ const Motto = styled.p`
 const Div = styled.div`
   background-color: var(--background_3);
   width: 100vw;
-  position: fixed;
-  bottom: 0;
 `
 
 const Copywright = styled.p`
   font-weight: bolder;
   text-align: center;
   color: white;
+  margin: 0;
 `
 
 const Footer = () => {

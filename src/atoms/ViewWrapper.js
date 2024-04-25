@@ -2,14 +2,14 @@ import { styled } from "styled-components";
 
 const Desktop = styled.div`
   width: 100vw;
-  padding-bottom: 80px;
   padding-top: 32px;
+  min-height: calc(100vh - 32px);
 `
 
 const Mobile = styled.div`
   width: 100vw;
-  padding-bottom: 80px;
   padding-top: 60px;
+  min-height: calc(100vh - 60px);
 `
 
 const Title = styled.h3`
@@ -20,7 +20,7 @@ const Title = styled.h3`
 
 const ViewWrapper = (props) => {
   const { width, children } = props;
-  const isMobile = width <= 650;
+  const isMobile = width <= 500;
 
   return (
     <>

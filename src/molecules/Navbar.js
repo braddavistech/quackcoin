@@ -50,36 +50,36 @@ const Navbar = ({ width }) => {
         <NavItem to="/" active={(location.pathname === '/').toString()}>
           <QuackImage src={QuackText} alt="Quack"/>
         </NavItem>
-        {width > 650 && <>
+        {width > 500 && <>
         <NavItem to="/about" active={(location.pathname === '/about').toString()}>
           About
-        </NavItem>
-        <NavItem to="/chart" active={(location.pathname === '/chart').toString()}>
-          Chart
-        </NavItem>
-        <NavItem to="/links" active={(location.pathname === '/links').toString()}>
-          Links
         </NavItem>
         <NavItem to="/roadmap" active={(location.pathname === '/roadmap').toString()}>
           Roadmap
         </NavItem>
+        <NavItem to="/links" active={(location.pathname === '/links').toString()}>
+          Links
+        </NavItem>
+        {/* <NavItem to="/chart" active={(location.pathname === '/chart').toString()}>
+          Chart
+        </NavItem> */}
         </>}
         <BuyButton width={width} text='BUY NOW' to='https://app.uniswap.org/swap?outputCurrency=0x5ace197d87b614942bc1670eb0ddd55ce4432801&chain=base' />
       </NavMenu>
-      { width <= 650 &&
+      { width <= 500 &&
         <NavMenu>
             <NavItem to="/about" active={(location.pathname === '/about').toString()}>
               About
             </NavItem>
-            <NavItem to="/chart" active={(location.pathname === '/chart').toString()}>
-              Chart
+            <NavItem to="/roadmap" active={(location.pathname === '/roadmap').toString()}>
+              Roadmap
             </NavItem>
             <NavItem to="/links" active={(location.pathname === '/links').toString()}>
               Links
             </NavItem>
-            <NavItem to="/roadmap" active={(location.pathname === '/roadmap').toString()}>
-              Roadmap
-            </NavItem>
+            {/* <NavItem to="/chart" active={(location.pathname === '/chart').toString()}>
+              Chart
+            </NavItem> */}
         </NavMenu>
       }
     </NavbarDiv>

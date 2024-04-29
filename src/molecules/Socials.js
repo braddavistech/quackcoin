@@ -6,6 +6,7 @@ import DexTools from '../images/Dextools.png'
 import Uniswap from '../images/Uniswap.png'
 
 const Div = styled.div`
+  z-index: 2;
   position: relative;
   width: ${({ width }) => width <= 760 ? '80vw' : '40vw'};
   top: ${({ width }) => width <= 500 ? '60px' : '50px'};
@@ -23,6 +24,7 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 16px;
+  cursor: pointer;
 `
 
 const FAIcon = styled(FontAwesomeIcon)`
@@ -39,19 +41,19 @@ const Icon = styled.img`
 const Socials = ({ width }) => {
   return (
     <Div width={width}>
-      <IconWrapper>
+      <IconWrapper href='https://t.me/quackpublic' target="_blank">
         <Icon src={Telegram} alt='Telegram Link' />
       </IconWrapper>
-      <IconWrapper>
+      <IconWrapper href='https://www.linkedin.com/in/christian-clayton-398330157/' target="_blank">
         <FAIcon icon={faLinkedinIn} />
       </IconWrapper>
-      <IconWrapper>
+      <IconWrapper href='https://www.dextools.io/app/en/base/pair-explorer/0xdb8e18f3884a52d283500554dde7dd3b5d633d78?t=1714431071346' target="_blank">
         <Icon src={DexTools} alt='DexTools Link' />
       </IconWrapper>
-      <IconWrapper>
+      <IconWrapper href="https://app.uniswap.org/swap?outputCurrency=0x5ace197d87b614942bc1670eb0ddd55ce4432801&chain=base" target="_blank">
         <Icon src={Uniswap} alt='Uniswap Link' />
       </IconWrapper>
-      <IconWrapper>
+      <IconWrapper href="https://twitter.com/quackonchain" target="_blank">
         <FAIcon icon={faXTwitter} />
       </IconWrapper>
     </Div>

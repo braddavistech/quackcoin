@@ -17,7 +17,7 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   width: ${({ width }) => width <= 500 ? '105px' : '130px'};
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bolder;
   border-radius: 22px;
   border: 1px solid black;
@@ -25,6 +25,7 @@ const Button = styled.button`
   color: black;
   height: 24px;
   cursor: pointer;
+  padding: 2px 0;
 `
 
 const BuyButton = ({ width, to, text} ) => {

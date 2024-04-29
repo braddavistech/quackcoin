@@ -25,8 +25,10 @@ const NavLabel = styled.div`
 const NavItem = styled.p`
   margin: 0;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bolder;
+  display: flex;
+  align-items: center;
 `
 
 const QuackImage = styled.img`

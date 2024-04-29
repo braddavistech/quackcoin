@@ -22,7 +22,6 @@ const About = ({ width }) => {
     <ViewWrapper width={width}>
       <Title>The Quack Mission</Title>
       <Body>
-
         <Paragraph>
           Why $QUACK and what’s the future of this QUACKING mission?
         </Paragraph>

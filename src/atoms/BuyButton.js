@@ -16,7 +16,7 @@ const Button = styled.button`
   background-color: #FFCA00;
   display: flex;
   justify-content: center;
-  width: 130px;
+  width: ${({ width }) => width <= 500 ? '105px' : '130px'};
   font-size: 18px;
   font-weight: bolder;
   border-radius: 22px;
@@ -27,10 +27,10 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-const BuyButton = (props) => {
+const BuyButton = ({ width, to, text} ) => {
   return (
-      <ButtonDiv onClick={() => window.open(props.to)}>
-        <Button className="Quack-logo" alt="Quack Coin" target="_blank">{props.text}</Button>
+      <ButtonDiv onClick={() => window.open(to)}>
+        <Button className="Quack-logo" alt="Quack Coin" target="_blank" width={width}>{text}</Button>
       </ButtonDiv>
   );
 }

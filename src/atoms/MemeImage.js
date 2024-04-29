@@ -38,7 +38,7 @@ const TitleText = styled.p`
   font-size: 20px;
 `
 
-const MemeImage = ({ src, alt, width, background, titles }) => {
+const MemeImage = ({ src, alt, width, background, titles, href }) => {
 
   const makeTitles = (titles) => {
     if (titles) {

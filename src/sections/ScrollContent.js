@@ -32,8 +32,8 @@ const ScrollContent = ({ width }) => {
   return (
     <>
       <Row width={width} top={width <= 500 ? '-50vw' : width <= 700 ? '-40vw' : width <= 1050 ? '-30vw' : '-20vw'}>
-        <MemeImage width={width} src={OrangeBoss} alt="Online Boss" background={`var(--background-orange)`} titles={['DOXXED FOUNDER', '@ONLINEBOSS_']}/>
-        <MemeImage width={width} src={Quack} alt="Quack" background={`var(--background-orange)`} titles={['$QUACK DEALER']} />
+        <MemeImage width={width} src={OrangeBoss} alt="Online Boss" background={`var(--background-orange)`} titles={['DOXXED FOUNDER', '@ONLINEBOSS_']} href="https://twitter.com/Onlineboss_" />
+        <MemeImage width={width} src={Quack} alt="Quack" background={`var(--background-orange)`} titles={['$QUACK DEALER']} href="https://twitter.com/quackonchain" />
       </Row>
       <PieChart width={width} />
       <Row width={width}>

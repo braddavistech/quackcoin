@@ -9,6 +9,7 @@ import styled from "styled-components";
 import ScrollWrapper from "./molecules/ScrollWrapper";
 import Navbar from './sections/Navbar';
 import QuackTitle from './atoms/QuackTitle';
+import PieChart from "./molecules/PieChart";
 import About from "./sections/About";
 
 const Body = styled.div`
@@ -28,6 +29,7 @@ const App = () => {
       <Navbar width={width}/>
       <QuackTitle width={width} />
       <ScrollWrapper speed={40}>
+        <PieChart width={width} />
         <About width={width} />
         <About width={width} />
         <About width={width} />

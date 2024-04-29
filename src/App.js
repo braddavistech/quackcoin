@@ -8,12 +8,18 @@ import { useState } from "react";
 import styled from "styled-components";
 import ScrollWrapper from "./molecules/ScrollWrapper";
 import Navbar from './sections/Navbar';
-import QuackTitle from './atoms/QuackTitle';
-import PieChart from "./molecules/PieChart";
-import About from "./sections/About";
+import Socials from "./molecules/Socials";
+import About from "./sections/ScrollContent";
 
 const Body = styled.div`
 
+`
+
+const ParallaxDiv = styled.div`
+  ${({ top }) => top && `
+    position: relative;
+    top: ${top};
+  `}
 `
 
 const App = () => {
@@ -26,16 +32,14 @@ const App = () => {
 
   return (
     <Body>
-      <Navbar width={width}/>
-      <QuackTitle width={width} />
-      <ScrollWrapper speed={40}>
-        <PieChart width={width} />
-        <About width={width} />
-        <About width={width} />
-        <About width={width} />
-        <About width={width} />
-        <About width={width} />
-      </ScrollWrapper>
+      <Navbar width={width} />
+      <Socials width={width} />
+      <ParallaxDiv top={width <= 500 ? '-90vw' : width <= 700 ? '-36vw' : width <= 1050 ? '-30vw' : '-20vw'}>
+        <ScrollWrapper speed={70}>
+          <About width={width} />
+        </ScrollWrapper>
+        <Socials width={width} />
+      </ParallaxDiv>
     </Body>
   );
 }

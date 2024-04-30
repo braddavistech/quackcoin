@@ -5,7 +5,6 @@ import TelegramQuack from '../images/TelegramQuack.png';
 import TwitterQuack from '../images/TwitterQuack.png';
 
 const ImageDiv = styled.div`
-  // border: 2px solid #FFCA00;
   border-radius: 10px;
   height: fit-content;
   ${({ background }) => background && `background-color: ${background};`}

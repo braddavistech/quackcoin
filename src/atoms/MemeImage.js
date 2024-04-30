@@ -1,8 +1,8 @@
 import { styled } from 'styled-components';
-import Logo from '../images/BikeQuack.png';
-import Splash from '../images/Splash.png';
-import TelegramQuack from '../images/TelegramQuack.png';
-import TwitterQuack from '../images/TwitterQuack.png';
+import Logo from '../media/images/BikeQuack.png';
+import Splash from '../media/images/Splash.png';
+import TelegramQuack from '../media/images/TelegramQuack.png';
+import TwitterQuack from '../media/images/TwitterQuack.png';
 
 const ImageDiv = styled.div`
   border-radius: 10px;

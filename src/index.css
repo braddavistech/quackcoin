@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('/src/images/StreakedBG.png');
+  background-image: url('/src/media/images/FeatherBackground.png');
   background-repeat: repeat-y;
   background-size: cover;
 }
@@ -16,6 +16,8 @@ code {
 }
 
 :root {
+  --background-blue: rgba(55,126,254,1);
+  --background-trans-blue: rgba(55,126,254,.5);
   --background-orange: rgba(242,104,34,1);
   --background-trans-orange: rgba(242,104,34,.5);
   --background_1: #9dd2fa;

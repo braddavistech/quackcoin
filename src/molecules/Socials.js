@@ -1,15 +1,15 @@
 import { styled } from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTelegram, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons'
-import Telegram from '../images/Telegram.png'
-import DexTools from '../images/Dextools.png'
-import Uniswap from '../images/Uniswap.png'
+import Telegram from '../media/images/Telegram.png'
+import DexTools from '../media/images/Dextools.png'
+import Uniswap from '../media/images/Uniswap.png'
 
 const Div = styled.div`
   z-index: 2;
   position: relative;
   width: ${({ width }) => width <= 760 ? '80vw' : '40vw'};
-  top: ${({ width }) => width <= 500 ? '60px' : '50px'};
+  top: ${({ width }) => width <= 500 ? '115px' : '115px'};
   display: flex;
   flex-direction: row;
   margin: auto;

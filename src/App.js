@@ -34,7 +34,7 @@ const App = () => {
     <Body>
       <Navbar width={width} />
       <Socials width={width} />
-      <ParallaxDiv top={width <= 500 ? '-90vw' : width <= 700 ? '-36vw' : width <= 1050 ? '-30vw' : '-20vw'}>
+      <ParallaxDiv top={width <= 500 ? '-80vw' : width <= 700 ? '-30vw' : width <= 1050 ? '-25vw' : '-16vw'}>
         <ScrollWrapper speed={70}>
           <About width={width} />
         </ScrollWrapper>

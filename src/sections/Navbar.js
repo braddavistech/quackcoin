@@ -1,5 +1,5 @@
 import { styled } from 'styled-components';
-import QuackText from '../images/QuackText.png'
+import QuackText from '../media/images/QuackText.png'
 import BuyButton from '../atoms/BuyButton';
 
 const NavbarDiv = styled.div`
@@ -7,7 +7,7 @@ const NavbarDiv = styled.div`
   position: fixed;
   top: 0;
   z-index: 10;
-  background-color: rgba(0, 0, 0, .3);
+
 `
 
 const NavMenu = styled.div`
@@ -19,7 +19,8 @@ const NavMenu = styled.div`
 
 const NavLabel = styled.div`
   display: flex;
-  align-items: center;
+  display: flex;
+  margin: 7px;
 `
 
 const NavItem = styled.p`
@@ -29,6 +30,10 @@ const NavItem = styled.p`
   font-weight: bolder;
   display: flex;
   align-items: center;
+  background-color: rgba(0, 0, 0, .3);
+  height: 25px;
+  padding: 5px;
+  border-radius: 10px;
 `
 
 const QuackImage = styled.img`

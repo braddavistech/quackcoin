@@ -1,16 +1,16 @@
 import { styled } from "styled-components";
 import PieChart from "../molecules/PieChart";
 import MemeImage from "../atoms/MemeImage";
-import OnlineBossFinger from '../images/OnlineBossFinger.png'
+import OnlineBossFinger from '../media/images/ChristianHeadshotFingerpointBlue.png'
 
-import OnlineBossOrange from '../images/OnlineBossOrange.png'
-import Quack from '../images/Quack.png'
-import LamboQuack from "../images/LamboQuack.jpeg"
-import BeatlesQuack from "../images/BeatlesQuack.jpeg"
-import MatrixQuack from "../images/MatrixQuack.jpeg"
-import PeopleQuack from "../images/PeopleQuack.jpeg"
-import SpaceQuack from "../images/SpaceQuack.jpeg"
-import SuperheroQuack from "../images/SuperheroQuack.jpeg"
+import OnlineBossOrange from '../media/images/OnlineBossOrange.png'
+import Quack from '../media/images/Quack.png'
+import LamboQuack from "../media/images/LamboQuack.jpeg"
+import BeatlesQuack from "../media/images/BeatlesQuack.jpeg"
+import MatrixQuack from "../media/images/MatrixQuack.jpeg"
+import PeopleQuack from "../media/images/PeopleQuack.jpeg"
+import SpaceQuack from "../media/images/SpaceQuack.jpeg"
+import SuperheroQuack from "../media/images/SuperheroQuack.jpeg"
 
 const Row = styled.div`
   display: flex;
@@ -31,11 +31,13 @@ const Box = styled.div`
 
 
 const ScrollContent = ({ width }) => {
+  // const topWidth = width <= 500 ? '-20vw' : width <= 700 ? '-25vw' : width <= 1050 ? '-20vw' : '-15vw';
+
   return (
     <>
-      <Row width={width} top={width <= 500 ? '-50vw' : width <= 700 ? '-40vw' : width <= 1050 ? '-30vw' : '-20vw'}>
-        <MemeImage width={width} src={OnlineBossOrange} alt="Online Boss" background={`var(--background-orange)`} titles={['DOXXED FOUNDER', '@ONLINEBOSS_']} href="https://twitter.com/Onlineboss_" />
-        <MemeImage width={width} src={Quack} alt="Quack" background={`var(--background-orange)`} titles={['$QUACK DEALER']} href="https://twitter.com/quackonchain" />
+      <Row width={width} >
+        <MemeImage width={width} src={OnlineBossFinger} alt="Online Boss" background={`rgba(255,255,255,.7)`} titles={['DOXXED FOUNDER', '@ONLINEBOSS_']} href="https://twitter.com/Onlineboss_" />
+        <MemeImage width={width} src={Quack} alt="Quack" background={`rgba(255,255,255,.7)`} titles={['$QUACK DEALER']} href="https://twitter.com/quackonchain" />
       </Row>
       <PieChart width={width} />
       <Row width={width}>

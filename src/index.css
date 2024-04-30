@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('/src/images/CandleChart.jpeg');
+  background-image: url('/src/images/StreakedBG.png');
   background-repeat: repeat-y;
-  background-size: contain;
+  background-size: cover;
 }
 
 code {
@@ -16,8 +16,8 @@ code {
 }
 
 :root {
-  --background-orange: rgba(226,108,43, 1);
-  --background-trans-orange: rgba(226,108,43, .5);
+  --background-orange: rgba(242,104,34,1);
+  --background-trans-orange: rgba(242,104,34,.5);
   --background_1: #9dd2fa;
   --background_2: #0180ff;
   --background_3: #003ab4;

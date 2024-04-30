@@ -11,7 +11,7 @@ const FullDiv = styled.div`
 
 const Div = styled.div`
   width: ${({ width }) => width <= 500 ? '80vw' : '60vw'};
-  background-color: #e26c2b;
+  background-color: rgb(242,104,34);
 `
 
 const Title = styled.p`
@@ -38,7 +38,7 @@ const PieChart = ({ width }) => {
     // title: "Token Distribution",
     chartArea: { width: '90%', height: '100%' },
     is3D: true,
-    backgroundColor: '#e26c2b',
+    backgroundColor: 'rgb(242,104,34)',
     legend: { position: 'right', alignment: 'center', textStyle: { fontSize: 14, fontWeight: 'bolder' } }
   };
 

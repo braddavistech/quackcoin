@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import ShoppingCart from '../images/ShoppingCart.png'
 import Logo from '../images/BikeQuack.png'
 
 const DivRow = styled.div`
@@ -10,6 +11,10 @@ const ButtonDiv = styled.div`
   display: flex;
   justify-content: end;
 
+`
+
+const Image = styled.img`
+  width: 60px;
 `
 
 const Button = styled.button`
@@ -31,6 +36,7 @@ const Button = styled.button`
 const BuyButton = ({ width, to, text} ) => {
   return (
       <ButtonDiv onClick={() => window.open(to)}>
+        {/* <Image src={ShoppingCart} alt="Buy Quack"/> */}
         <Button className="Quack-logo" alt="Quack Coin" target="_blank" width={width}>{text}</Button>
       </ButtonDiv>
   );

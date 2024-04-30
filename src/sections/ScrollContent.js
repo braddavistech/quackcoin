@@ -1,7 +1,9 @@
 import { styled } from "styled-components";
 import PieChart from "../molecules/PieChart";
 import MemeImage from "../atoms/MemeImage";
-import OrangeBoss from '../images/OrangeBoss.png'
+import OnlineBossFinger from '../images/OnlineBossFinger.png'
+
+import OnlineBossOrange from '../images/OnlineBossOrange.png'
 import Quack from '../images/Quack.png'
 import LamboQuack from "../images/LamboQuack.jpeg"
 import BeatlesQuack from "../images/BeatlesQuack.jpeg"
@@ -32,7 +34,7 @@ const ScrollContent = ({ width }) => {
   return (
     <>
       <Row width={width} top={width <= 500 ? '-50vw' : width <= 700 ? '-40vw' : width <= 1050 ? '-30vw' : '-20vw'}>
-        <MemeImage width={width} src={OrangeBoss} alt="Online Boss" background={`var(--background-orange)`} titles={['DOXXED FOUNDER', '@ONLINEBOSS_']} href="https://twitter.com/Onlineboss_" />
+        <MemeImage width={width} src={OnlineBossOrange} alt="Online Boss" background={`var(--background-orange)`} titles={['DOXXED FOUNDER', '@ONLINEBOSS_']} href="https://twitter.com/Onlineboss_" />
         <MemeImage width={width} src={Quack} alt="Quack" background={`var(--background-orange)`} titles={['$QUACK DEALER']} href="https://twitter.com/quackonchain" />
       </Row>
       <PieChart width={width} />
